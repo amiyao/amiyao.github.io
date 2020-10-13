@@ -376,6 +376,219 @@ sup > a::before,
 .footnote-text {
   padding-left: 0.5em;
 }
+:root {
+  --color-mode: 'light';
+  --body-bg-color: #eee;
+  --board-bg-color: #fff;
+  --text-color: #3c4858;
+  --sec-text-color: #718096;
+  --post-text-color: #2c3e50;
+  --post-heading-color: #1a202c;
+  --post-link-color: $post-link-color;
+  --link-hover-color: #1abc9c;
+  --link-hover-bg-color: #f8f9fa;
+  --navbar-bg-color: #2f4154;
+  --navbar-text-color: white;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([data-user-color-scheme]) {
+    --body-bg-color: $body-bg-color-dark;
+    --board-bg-color: $board-bg-color-dark;
+    --text-color: $text-color-dark;
+    --sec-text-color: $sec-text-color-dark;
+    --post-text-color: $post-text-color-dark;
+    --post-heading-color: $post-heading-color-dark;
+    --post-link-color: $post-link-color-dark;
+    --link-hover-color: $link-hover-color-dark;
+    --link-hover-bg-color: $link-hover-bg-color-dark;
+    --navbar-bg-color: $navbar-bg-color-dark;
+    --navbar-text-color: $navbar-text-color-dark;
+  }
+  :root:not([data-user-color-scheme]) img,
+  :root:not([data-user-color-scheme]) .note,
+  :root:not([data-user-color-scheme]) .label {
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+    transition: filter 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .page-header {
+    color: #ddd;
+    transition: color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body :not(pre) > code {
+    background-color: rgba(62,75,94,0.35);
+    transition: background-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body .highlight pre,
+  :root:not([data-user-color-scheme]) .markdown-body pre {
+    background-color: rgba(246,248,250,0.8);
+    transition: background-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body h1,
+  :root:not([data-user-color-scheme]) .markdown-body h2 {
+    border-bottom-color: $line-color-dark;
+    transition: border-bottom-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body h1,
+  :root:not([data-user-color-scheme]) .markdown-body h2,
+  :root:not([data-user-color-scheme]) .markdown-body h3,
+  :root:not([data-user-color-scheme]) .markdown-body h6,
+  :root:not([data-user-color-scheme]) .markdown-body h5 {
+    color: #ddd;
+    transition: color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body table tr {
+    background-color: var(--board-bg-color);
+    transition: background-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body table tr:nth-child(2n) {
+    background-color: var(--board-bg-color);
+    transition: background-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .markdown-body table th,
+  :root:not([data-user-color-scheme]) .markdown-body table td {
+    border-color: $line-color-dark;
+    transition: border-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) hr {
+    border-top-color: $line-color-dark;
+    transition: border-top-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .note :not(pre) > code {
+    background-color: rgba(27,31,35,0.05);
+  }
+  :root:not([data-user-color-scheme]) .modal-dialog .modal-content .modal-header {
+    border-bottom-color: $line-color-dark;
+    transition: border-bottom-color 0.2s ease-in-out;
+  }
+  :root:not([data-user-color-scheme]) .gt-comment-admin .gt-comment-content {
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+  }
+}
+[data-user-color-scheme='dark'] {
+  --body-bg-color: $body-bg-color-dark;
+  --board-bg-color: $board-bg-color-dark;
+  --text-color: $text-color-dark;
+  --sec-text-color: $sec-text-color-dark;
+  --post-text-color: $post-text-color-dark;
+  --post-heading-color: $post-heading-color-dark;
+  --post-link-color: $post-link-color-dark;
+  --link-hover-color: $link-hover-color-dark;
+  --link-hover-bg-color: $link-hover-bg-color-dark;
+  --navbar-bg-color: $navbar-bg-color-dark;
+  --navbar-text-color: $navbar-text-color-dark;
+}
+[data-user-color-scheme='dark'] img,
+[data-user-color-scheme='dark'] .note,
+[data-user-color-scheme='dark'] .label {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+  transition: filter 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .page-header {
+  color: #ddd;
+  transition: color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body :not(pre) > code {
+  background-color: rgba(62,75,94,0.35);
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body .highlight pre,
+[data-user-color-scheme='dark'] .markdown-body pre {
+  background-color: rgba(246,248,250,0.8);
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body h1,
+[data-user-color-scheme='dark'] .markdown-body h2 {
+  border-bottom-color: $line-color-dark;
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body h1,
+[data-user-color-scheme='dark'] .markdown-body h2,
+[data-user-color-scheme='dark'] .markdown-body h3,
+[data-user-color-scheme='dark'] .markdown-body h6,
+[data-user-color-scheme='dark'] .markdown-body h5 {
+  color: #ddd;
+  transition: color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body table tr {
+  background-color: var(--board-bg-color);
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body table tr:nth-child(2n) {
+  background-color: var(--board-bg-color);
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body table th,
+[data-user-color-scheme='dark'] .markdown-body table td {
+  border-color: $line-color-dark;
+  transition: border-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] hr {
+  border-top-color: $line-color-dark;
+  transition: border-top-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .note :not(pre) > code {
+  background-color: rgba(27,31,35,0.05);
+}
+[data-user-color-scheme='dark'] .modal-dialog .modal-content .modal-header {
+  border-bottom-color: $line-color-dark;
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .gt-comment-admin .gt-comment-content {
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.fade-in-up {
+  -webkit-animation-name: fade-in-up;
+  animation-name: fade-in-up;
+}
+.hidden-mobile {
+  display: block;
+}
+.visible-mobile {
+  display: none;
+}
+@media (max-width: 575px) {
+  .hidden-mobile {
+    display: none;
+  }
+  .visible-mobile {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .nopadding-md {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+.hover-with-bg {
+  display: inline-block;
+  padding: 0.45rem;
+}
+.hover-with-bg:hover {
+  background-color: var(--link-hover-bg-color);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  border-radius: 0.15rem;
+}
 @-moz-keyframes fadeInUp {
   from {
     opacity: 0;
